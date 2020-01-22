@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:screenOrientation="portrait"
+    tools:context=".ListActivity">
+
+    <TextView
+        android:id="@+id/headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:paddingLeft="20dp"
+        android:text="Top Headlines"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="#bdc3c7"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:text="Getting location..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+
+        <ListView
+            android:id="@+id/NewsItems"
+            android:layout_weight="50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_margin="10dp"
+            android:clickable="true">
+
+        </ListView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:id="@+id/Fragview"
+            android:gravity="center|bottom"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+        <fragment
+            android:id="@+id/Fragitem"
+            android:name="com.example.project_final.NewsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_news_display">
+
+        </fragment>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnav"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        ></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Rss Reader</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_news">News</string>
+    <string name="title_map">Map</string>
+    <string name="title_favorite">Favorites</string>
+    <string name="title_activity_bottom__nav">Bottom_Nav</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
